@@ -1,7 +1,7 @@
 
 
 @final = []
-@set_list = []
+@set_list = ["toothbrush", "toothpaste", "soap", "shampoo", "conditioner", "chargers/adapters"]
 
 def background
     back = ["Africa.jpg", "Australia.jpg", "Greece.jpg", "Peru.jpg", "Petra.jpg", "Shanghai.jpg", "Tokyo.jpg"]
@@ -37,8 +37,5 @@ def survey
     
     @final << @set_list
 end 
-
-
-
 
 

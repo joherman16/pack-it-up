@@ -7,18 +7,13 @@ class ApplicationController < Sinatra::Base
   get '/' do
     @title = "Homepage"
     @background= background
-    erb :index
-    erb :base 
-    erb :cp
+    erb :index, :layout => :base
+    # erb :cp
   end
 
-  get '/cp' do
-    @title = "Custom Pack List"
-    erb :cp
-  end
-  
   post '/cp' do
-    
+    @title = "Custom Pack List"
+    erb :cp, :layout => :cp
   end
 
 end

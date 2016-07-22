@@ -14,9 +14,6 @@
     <!-- Bootstrap Core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom Fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
     <!-- Theme CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-grayscale/1.1.0/css/grayscale.css" rel="stylesheet">
@@ -47,9 +44,9 @@
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#custompack">Custom Pack</a>
-                    </li>
+                    <!--<li>-->
+                    <!--    <a class="page-scroll" href="#custompack">Custom Pack</a>-->
+                    <!--</li>-->
                     <li>
                         <a class="page-scroll" href="#survey">Survey</a>
                     </li>
@@ -64,57 +61,62 @@
     </nav>
 
     <!-- Intro Header -->
-    <header style="background-image: url(images/Petra.jpg)" class="intro">
+    <header style="background-image: url(images/Australia.jpg)" class="intro">
         <div class="intro-body">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">PackItUp</h1>
                         <h4 class="intro-text">The easy way to pack</h4>
-                        <a href="#custompack" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
+                        <a href="#survey" class="btn btn-circle page-scroll">
+                            <i style="color:black"class="fa fa-angle-double-down animated"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    
+    <%= yield %>
 
     <!-- About Section -->
-    <section id="custompack" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Custom Pack</h2>
-                <p>If you're in a hurry, this is for you! 
-                <br>Input what you need to pack below, and we'll print it into an organised packing list. If you aren't sure what you need to pack, go down to the survey. </p>
-                <form method = "POST" action = '/cp'>
-                    <p>What clothes do you need to bring?</p>
-                    <textarea name="cpclothes"></textarea>
-                    <br><br><br>
-                    <p>What technology do you need to bring?</p>
-                    <textarea name="cptech"></textarea>
-                    <br><br><br>
-                    <p>What work or school items do you need to bring?</p>
-                    <textarea name="cpwork"></textarea>
-                    <br><br><br>
-                    <p>What toiletries do you need to bring?</p>
-                    <textarea name="cpbathroom"></textarea>
-                    <br><br><br>
-                    <p>Is there anything else?</p>
-                    <textarea name="cpextra"></textarea>
-                    <br><br><input type="submit" class="btn btn-default btn-lg"></a>
-                </form>
-            </div>
-        </div>
-    </section>
+    <!--<section id="custompack" class="container content-section text-center">-->
+    <!--    <div class="row">-->
+    <!--        <div class="col-lg-8 col-lg-offset-2">-->
+    <!--            <h2>Custom Pack</h2>-->
+    <!--            <p>If you're in a hurry, this is for you! -->
+    <!--            <br>Input what you need to pack below, and we'll print it into an organised packing list. If you aren't sure what you need to pack, go down to the survey. </p>-->
+    <!--            <form method = "POST" action = '/cp'>-->
+    <!--                <p>What clothes do you need to bring?</p>-->
+    <!--                <textarea name="cpclothes"></textarea>-->
+    <!--                <br><br><br>-->
+    <!--                <p>What technology do you need to bring?</p>-->
+    <!--                <textarea name="cptech"></textarea>-->
+    <!--                <br><br><br>-->
+    <!--                <p>What work or school items do you need to bring?</p>-->
+    <!--                <textarea name="cpwork"></textarea>-->
+    <!--                <br><br><br>-->
+    <!--                <p>What toiletries do you need to bring?</p>-->
+    <!--                <textarea name="cpbathroom"></textarea>-->
+    <!--                <br><br><br>-->
+    <!--                <p>Is there anything else?</p>-->
+    <!--                <textarea name="cpextra"></textarea>-->
+    <!--                <br><br><input type="submit" class="btn btn-default btn-lg"></a>-->
+    <!--            </form>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section>-->
 
     <!-- Download Section -->
-    <section id="survey" class="content-section text-center">
+    <section id="about" class="content-section text-center">
         <div style="background-image: url('images/downloads-bg.jpg')" class="download-section">
             <div class="container">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Survey</h2>
+                    <h2>About</h2>
                     <p>This is for trips where you aren't sure what you need to pack. We'll give you everything you might need to pack!</p>
+                    <br><br><br>
+                    <p>Are you flying?</p>
+                    
                     <input type = "submit" class="btn btn-default btn-lg">
                 </div>
             </div>
@@ -122,30 +124,30 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Start Bootstrap</h2>
-                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
-                <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+    <!--<section id="about" class="container content-section text-center">-->
+    <!--    <div class="row">-->
+    <!--        <div class="col-lg-8 col-lg-offset-2">-->
+    <!--            <h2>Contact Start Bootstrap</h2>-->
+    <!--            <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>-->
+    <!--            <p><a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>-->
+    <!--            </p>-->
+    <!--            <ul class="list-inline banner-social-buttons">-->
+    <!--                <li>-->
+    <!--                    <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>-->
+    <!--                </li>-->
+    <!--                <li>-->
+    <!--                    <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>-->
+    <!--                </li>-->
+    <!--                <li>-->
+    <!--                    <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>-->
+    <!--                </li>-->
+    <!--            </ul>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</section>-->
 
     <!-- Map Section -->
-    <div id="map"></div>
+    <!--<div id="map"></div>-->
 
     <!-- Footer -->
     <footer>
